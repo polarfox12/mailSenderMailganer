@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/mail_sender2.css" %}" rel="stylesheet">
+
+</head>
+<body>
+<div id="container">
+
+    <div id="form">
+        {% block form %}
+        {% endblock %}
+    </div>
+    <div id="nav">
+        {% include "sender_app/nav.html" %}
+    </div>
+</div>
+
+</body>
+</html>

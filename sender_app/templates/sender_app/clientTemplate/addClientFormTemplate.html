@@ -1,0 +1,16 @@
+
+{% extends 'sender_app/_base.html' %}
+{% load staticfiles %}
+
+{% block form %}
+    <h1 id="hAddClient">Add new client</h1>
+    <div class="createUserForm">
+    <form method="POST" class="clients-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    </div>
+    <div>
+            {% block result %}
+            {% endblock %}
+{% endblock %}
