@@ -4,6 +4,10 @@
 
 {% block form %}
     <h1 id="hAddClient">Add new client</h1>
+    <div id="form_desc">
+        <p>Заполните форму для добавления данных о новом клиенте компании.
+            <b>Поле Birth заполняется в формате "ДД.ММ.ГГГГ"</b></p>
+    </div>
     <div class="createUserForm">
     <form method="POST" class="clients-form">{% csrf_token %}
         {{ form.as_p }}
